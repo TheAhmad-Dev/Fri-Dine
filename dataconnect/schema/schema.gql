@@ -1,0 +1,54 @@
+type User @table {
+  displayName: String!
+  email: String!
+  createdAt: Timestamp!
+  photoUrl: String
+  bio: String
+  preferredCuisines: [String]
+}
+
+type Restaurant @table {
+  name: String!
+  address: String!
+  cuisineType: String!
+  createdAt: Timestamp!
+  phoneNumber: String
+  website: String
+  averageRating: Float
+  description: String
+  imageUrl: String
+}
+
+type Friendship @table(key: ["user1", "user2"]) {
+  user1: User!
+  user2: User!
+  status: String!
+  createdAt: Timestamp!
+}
+
+type Reservation @table {
+  organizer: User!
+  restaurant: Restaurant!
+  dateTime: Timestamp!
+  numberOfGuests: Int!
+  status: String!
+  createdAt: Timestamp!
+  notes: String
+}
+
+type ReservationGuest @table(key: ["reservation", "guest"]) {
+  reservation: Reservation!
+  guest: User!
+  status: String!
+  createdAt: Timestamp!
+  suggestedDateTime: Timestamp
+}
+
+type Review @table {
+  user: User!
+  restaurant: Restaurant!
+  rating: Int!
+  createdAt: Timestamp!
+  updatedAt: Timestamp!
+  comment: String
+}

@@ -1,0 +1,35 @@
+mutation CreateUser($displayName: String!, $email: String!) @auth(level: USER) {
+  user_insert(data: {displayName: $displayName, email: $email, createdAt_expr: "request.time", id_expr: "uuidV4()"})
+}
+
+query GetRestaurant($id: UUID!) @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  restaurant(id: $id) {
+    id
+    name
+    address
+    cuisineType
+    averageRating
+    description
+    imageUrl
+    phoneNumber
+    website
+  }
+}
+
+mutation CreateReview($restaurantId: UUID!, $rating: Int!, $comment: String) @auth(level: USER) {
+  review_insert(data: {restaurantId: $restaurantId, rating: $rating, comment: $comment, userId_expr: "auth.uid", createdAt_expr: "request.time", updatedAt_expr: "request.time", id_expr: "uuidV4()"})
+}
+
+query ListRestaurants @auth(level: PUBLIC, insecureReason: "This operation is safe to expose to the public") {
+  restaurants {
+    id
+    name
+    address
+    cuisineType
+    averageRating
+    description
+    imageUrl
+    phoneNumber
+    website
+  }
+}

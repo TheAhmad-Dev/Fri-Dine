@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Fri-Dine",
+    "slug": "Fri-Dine",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "fridine",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+
+    "icon": "./assets/images/logoi.png",
+
+    "ios": {
+      "supportsTablet": true
+    },
+
+    "android": {
+      "package": "com.fridine.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logoi.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+
+    "web": {
+      "output": "static"
+    },
+
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "@react-native-community/datetimepicker"
+    ],
+
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "cc673dc4-bd35-4098-8728-8730ef20366f"
+      }
+    },
+
+    "owner": "ahmad-7"
+  }
+}
