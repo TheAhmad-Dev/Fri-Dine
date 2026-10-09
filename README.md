@@ -1,50 +1,29 @@
-# Welcome to your Expo app 👋
+# Fri-Dine 🍽️
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Fri-Dine is an Android restaurant table-booking application that helps users discover restaurants, explore dining options, and reserve tables conveniently.
 
-## Get started
+## Features
 
-1. Install dependencies
+* Discover popular restaurants and cafés.
+* Explore Pakistani cuisine, including karahi and other traditional dishes.
+* Browse restaurant information and available booking options.
+* Reserve tables for dining.
+* User authentication and restaurant discovery.
 
-   ```bash
-   npm install
-   ```
+## Technology Stack
 
-2. Start the app
+* React Native
+* Expo
+* JavaScript
+* Firebase
 
-   ```bash
-   npx expo start
-   ```
+## Getting Started
 
-In the output, you'll find options to open the app in a
+1. Clone this repository.
+2. Install dependencies using `npm install`.
+3. Configure your Firebase credentials and environment variables locally.
+4. Start the application using `npx expo start`.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Security
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Never commit `.env` files, private credentials, or service-account keys to GitHub.
